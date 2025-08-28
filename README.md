@@ -1,5 +1,6 @@
 1. Create a basic React/nextjs app (static)
-2. Implement this function
+2. Connect wallet with a connect application (rainbowkit)
+3. Implement this function
 ```solidity
 function airdropERC20(
     address tokenAddress, //ERC20 token
@@ -8,4 +9,4 @@ function airdropERC20(
     uint256 totalAmount
 )
 ```
-3. Deploy to fleek
+1. Deploy to fleek
