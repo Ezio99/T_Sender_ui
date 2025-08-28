@@ -1,6 +1,10 @@
+//Layout is kind of like the main page of the app
+
 import type { Metadata } from "next";
 import "./globals.css";
-
+import { type ReactNode } from "react"
+import { Providers } from "./providers"
+import Header from "@/components/Header"
 
 
 export const metadata: Metadata = {
@@ -8,16 +12,16 @@ export const metadata: Metadata = {
   description: "Send tokens",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// Every React component can accept props (inputs)
+export default function RootLayout(props: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
       >
-        {children}
+        <Providers>
+          <Header />
+          {props.children}
+        </Providers>
       </body>
     </html>
   );
